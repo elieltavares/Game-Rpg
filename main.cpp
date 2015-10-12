@@ -7,13 +7,8 @@
 #include "include/character.h"
 #include <iostream>
 
-
-
 int main(int argc, char* argv[])
 {
-
-
-
     Setup* setup = new Setup();
     SDL_Renderer* renderer;
     renderer = setup->GetRenderer();
@@ -33,12 +28,10 @@ int main(int argc, char* argv[])
     bool tecla_d = false;
 
     int cena = 1;
-
-
     int velocidade = 1;
     int AnimationVelocidade = 200;
-
     bool quit = false;
+    
     while(!quit)
     {
         if(setup->GetEvent()->type == SDL_QUIT)
@@ -47,9 +40,6 @@ int main(int argc, char* argv[])
         }
         else
         {
-
-
-
             if(tecla_s)
             {
                 person->SetY(person->GetY() + velocidade);
@@ -97,8 +87,6 @@ int main(int argc, char* argv[])
                             velocidade = 2;
                             AnimationVelocidade = 100;
                             break;
-
-
                     }
                     break;
                 case SDL_KEYUP:
@@ -123,11 +111,8 @@ int main(int argc, char* argv[])
                         case SDLK_LSHIFT:
                             velocidade = 1;
                             AnimationVelocidade = 200;
-
                     }
                     break;
-
-
             }
             std::cout <<"X: "<< person->GetX() << "     Y: "<<person->GetY()<<std::endl;
 
@@ -172,11 +157,9 @@ if(cena == 1)
                         case SDLK_SPACE:
                             cena = 2;
                         break;
-
                     }
                 }
             }
-
 }
 //////////////////////////////////////////////////////////////
 if(cena == 2)
@@ -189,14 +172,9 @@ if(cena == 2)
    {
         tecla_w = false;
    }
-
-
 }
             //////////////////
-
             setup->Inicio();
-
-
             if(cena == 1){
             grama->Draw();
             casa->Draw();
@@ -210,27 +188,9 @@ if(cena == 2)
             casa_dentro_paderes_02->Draw();
             }
             npc_1->Draw();
-
-
-
-
-
-
-
-
-
             setup->Fim();
-
-
-
-
-
         }
-
-
     }
-
-
     delete setup;
     delete grama;
     delete person;
@@ -239,10 +199,5 @@ if(cena == 2)
     delete casa_dentro_paderes_02;
     delete casa_dentro_chao;
     delete npc_1;
-
-
-
     return 0;
 }
-
-#
