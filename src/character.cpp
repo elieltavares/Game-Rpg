@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <string>
-#include "character.h"
+#include "../include/character.h"
 
 character::character(SDL_Renderer* passed_renderer,std::string FilePath, int x, int y, int w, int h)
 {
